@@ -1,6 +1,8 @@
+"use client"
+
 import { AxiosInstance } from "axios";
-import { LogInDto } from "./auth.dto";
-import { LogInData } from "./auth.response";
+import { LogInDto, SignUpDto } from "./auth.dto";
+import { LogInData, SignUpData } from "./auth.response";
 
 class AuthAPI{
     private coreClient : AxiosInstance;
@@ -16,6 +18,14 @@ class AuthAPI{
 
         return data;
     }
+
+    signUp = async (dto: SignUpDto) => {
+        const url = "/auth/sign-up";
+        const response = await this.coreClient.post<SignUpData>(url, dto);
+        const data = response.data;
+    
+        return data;
+      };
 }
 
 export default AuthAPI;
