@@ -1,6 +1,6 @@
 "use client";
 
-import { useAppSelector } from "@/redux/store";
+import { store, useAppSelector } from "@/redux/store";
 import React from "react";
 import Header from "./_components/Header";
 

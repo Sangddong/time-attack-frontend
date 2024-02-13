@@ -1,19 +1,15 @@
 import { AuthProvider } from "@/contexts/auth.context";
 import React from "react";
 import ReactQueryProvider from "./reactQuery.provider";
-import { ReduxProvider } from "@/redux/store";
-import { Provider } from "react-redux";
+import { ReduxProvider, store } from "@/redux/store";
 
 function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <Provider store={store}>
     <ReactQueryProvider>
       <ReduxProvider>
-        <AuthProvider>
-          {children}
-          </AuthProvider>
+        <AuthProvider>{children}</AuthProvider>
       </ReduxProvider>
-    </ReactQueryProvider></Provider>
+    </ReactQueryProvider>
   );
 }
 

@@ -1,7 +1,6 @@
 "use client";
 
-
-import API from "@/api/users/index.api";
+import API from "@/api/index.api";
 import { useRouter } from "next/navigation";
 import { createContext, useContext, useEffect, useState } from "react";
 

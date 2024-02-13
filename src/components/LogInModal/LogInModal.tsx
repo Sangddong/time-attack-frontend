@@ -1,4 +1,4 @@
-import API from "@/api/users/index.api";
+import API from "@/api/index.api";
 import { setModal } from "@/redux/slices/utils.slice";
 import { useAppDispatch } from "@/redux/store";
 import { useMutation } from "@tanstack/react-query";
